@@ -118,13 +118,12 @@ export function ServiceDetail({ service }: ServiceDetailProps) {
                     <span>Protected bank escrow options</span>
                   </div>
                 </div>
-                <Link
-                  href="/contact"
-                  className="btn-3d-primary cta-glow w-full inline-flex items-center justify-center gap-2 px-5 py-3.5 text-xs font-bold uppercase tracking-wider text-white bg-blue-600 hover:bg-blue-700 rounded-xl transition-all shadow-md"
-                >
-                  <span>Talk to Our Team</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
-                </Link>
+                <ContactChoiceButton
+                  label="Talk to Our Team"
+                  variant="primary"
+                  fullWidth
+                  className="[&>button]:py-3.5"
+                />
               </div>
             </FadeIn>
           </div>
@@ -216,13 +215,11 @@ export function ServiceDetail({ service }: ServiceDetailProps) {
               Speak directly with our team in Kampala to discuss your requirements, check availability, or request a quote.
             </p>
             <div className="pt-6">
-              <Link
-                href="/contact"
-                className="btn-3d-primary cta-glow inline-flex items-center justify-center gap-2 px-8 py-4 text-sm font-bold uppercase tracking-wider text-white bg-blue-600 hover:bg-blue-700 rounded-xl transition-all shadow-lg"
-              >
-                <span>Talk to Our Team</span>
-                <ArrowRight className="w-4 h-4" />
-              </Link>
+              <ContactChoiceButton
+                label="Talk to Our Team"
+                variant="primary"
+                className="[&>button]:px-8 [&>button]:py-4 [&>button]:text-sm"
+              />
             </div>
           </FadeIn>
         </div>
