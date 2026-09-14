@@ -62,7 +62,19 @@ export const services: Service[] = [
     seo: {
       title: 'Precious Metals Trading | Gold Trading Uganda | Apex Mineral Ventures',
       description: 'Secure precious metals trading services in Uganda. Professional gold trading with verified sourcing, quality assurance, and regulatory compliance.',
-      keywords: ['gold trading Uganda', 'precious metals trading', 'gold buying Uganda', 'gold selling Uganda', 'bullion trading'],
+      keywords: [
+        'gold in uganda',
+        'gold in congo',
+        'gold in africa',
+        'gold trading Uganda',
+        'buy gold in uganda',
+        'congo gold trade',
+        'african gold exporters',
+        'drc gold dore',
+        'licensed gold dealers kampala',
+        'precious metals trading east africa',
+        'bullion trading uganda',
+      ],
     },
   },
   {
@@ -190,7 +202,17 @@ export const services: Service[] = [
     seo: {
       title: 'Mineral Export Facilitation | Gold Export Uganda | Apex Mineral Ventures',
       description: 'Professional mineral export facilitation services. Complete documentation, regulatory approvals, and logistics coordination for Uganda mineral exports.',
-      keywords: ['gold export Uganda', 'mineral export Uganda', 'export documentation Uganda', 'mineral export permits'],
+      keywords: [
+        'gold in uganda export',
+        'gold in congo transit',
+        'african gold export documentation',
+        'gold export Uganda',
+        'mineral export Uganda',
+        'export documentation Uganda',
+        'mineral export permits dgsm',
+        'drc mineral export corridor uganda',
+        'icglr export certificate uganda',
+      ],
     },
   },
   {
