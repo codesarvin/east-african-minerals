@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "deploy": "wrangler pages deploy out --project-name=east-african-minerals",
     "start": "next start",
     "lint": "eslint"
   },
