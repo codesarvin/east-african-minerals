@@ -16,90 +16,176 @@ export function BrandLogo({
   const isDark = variant === 'dark';
 
   const dimensions = {
-    sm: { icon: 32, text: 'text-sm', sub: 'text-[9px]' },
-    md: { icon: 42, text: 'text-base', sub: 'text-[10px]' },
-    lg: { icon: 50, text: 'text-xl', sub: 'text-xs' },
+    sm: { icon: 34, text: 'text-sm', sub: 'text-[8.5px]' },
+    md: { icon: 44, text: 'text-base', sub: 'text-[9.5px]' },
+    lg: { icon: 52, text: 'text-xl', sub: 'text-[11px]' },
   }[size];
 
   return (
     <div className={`flex items-center gap-3 select-none ${className}`}>
-      {/* Geometric Mineral Emblem */}
+      {/* Obsidian & Gold Geometric Mineral Emblem */}
       <div 
-        className="relative flex-shrink-0 flex items-center justify-center rounded-xl p-1.5 transition-transform duration-300 group-hover:scale-105"
+        className="relative flex-shrink-0 flex items-center justify-center rounded-xl p-1.5 transition-all duration-300 group-hover:scale-105 group-hover:shadow-[0_0_20px_rgba(217,119,6,0.35)]"
         style={{
           width: dimensions.icon,
           height: dimensions.icon,
-          background: 'linear-gradient(135deg, #0052D6 0%, #002266 100%)',
-          border: '1px solid rgba(0, 102, 255, 0.45)',
-          boxShadow: '0 4px 18px -2px rgba(0, 102, 255, 0.28), inset 0 1px 0 0 rgba(255, 255, 255, 0.15)',
+          background: 'linear-gradient(135deg, #111827 0%, #0B0F17 50%, #030712 100%)',
+          border: '1px solid rgba(217, 119, 6, 0.55)',
+          boxShadow: '0 4px 20px -2px rgba(0, 0, 0, 0.6), 0 0 14px -2px rgba(245, 158, 11, 0.25), inset 0 1px 1px 0 rgba(254, 240, 138, 0.3)',
         }}
       >
         <svg 
-          viewBox="0 0 40 40" 
+          viewBox="0 0 44 44" 
           fill="none" 
           xmlns="http://www.w3.org/2000/svg"
-          className="w-full h-full"
+          className="w-full h-full drop-shadow-sm"
         >
-          {/* Faceted Hexagon Structure */}
+          {/* Outer Obsidian Faceted Shield */}
           <polygon 
-            points="20,4 34,12 34,28 20,36 6,28 6,12" 
-            stroke="url(#blueStroke)" 
-            strokeWidth="1.5" 
-            fill="none"
+            points="22,3 38,12 38,32 22,41 6,32 6,12" 
+            fill="url(#obsidianBase)" 
+            stroke="url(#goldBorder)" 
+            strokeWidth="1.2"
           />
-          {/* Inner Apex Triangle "A" Prism */}
+
+          {/* Obsidian Crystal Facet Planes */}
+          <polygon points="22,3 38,12 22,22 6,12" fill="url(#facetTop)" fillOpacity="0.8" />
+          <polygon points="6,12 22,22 22,41 6,32" fill="url(#facetLeft)" fillOpacity="0.9" />
+          <polygon points="38,12 22,22 22,41 38,32" fill="url(#facetRight)" fillOpacity="0.95" />
+
+          {/* Faceted Internal Diamond / Apex Pyramid */}
+          {/* Left Facet of Apex */}
           <polygon 
-            points="20,10 30,28 10,28" 
-            stroke="url(#blueStroke)" 
-            strokeWidth="2" 
-            fill="url(#blueFill)" 
-            fillOpacity="0.35"
+            points="22,9 22,29 11,26" 
+            fill="url(#goldFacetLeft)" 
+            stroke="url(#goldWire)" 
+            strokeWidth="0.8"
           />
-          {/* Core Central Diamond */}
+          {/* Right Facet of Apex */}
           <polygon 
-            points="20,16 25,23 20,28 15,23" 
-            fill="url(#blueCore)"
+            points="22,9 33,26 22,29" 
+            fill="url(#goldFacetRight)" 
+            stroke="url(#goldWire)" 
+            strokeWidth="0.8"
           />
-          {/* Crossbar accent */}
+
+          {/* Central Brilliant Cut Gem Core */}
+          <polygon 
+            points="22,14 27,21 22,27 17,21" 
+            fill="url(#goldCore)"
+            stroke="#FFFBEB"
+            strokeWidth="0.6"
+          />
+
+          {/* Precision Horizontal Platinum/Gold Baseline */}
           <line 
-            x1="14" 
-            y1="25" 
-            x2="26" 
-            y2="25" 
-            stroke="#60A5FA" 
+            x1="12" 
+            y1="29" 
+            x2="32" 
+            y2="29" 
+            stroke="url(#goldLine)" 
             strokeWidth="1.5" 
+            strokeLinecap="round"
           />
+
+          {/* Top Specular Glint */}
+          <circle cx="22" cy="3" r="1.5" fill="#FEF08A" />
+          <path d="M22 0.5 L22 5.5 M19.5 3 L24.5 3" stroke="#FFFBEB" strokeWidth="0.7" strokeLinecap="round" />
+
+          {/* Gradients Definition */}
           <defs>
-            <linearGradient id="blueStroke" x1="6" y1="4" x2="34" y2="36" gradientUnits="userSpaceOnUse">
-              <stop stopColor="#93C5FD" />
-              <stop offset="0.5" stopColor="#0066FF" />
-              <stop offset="1" stopColor="#0043B8" />
+            {/* Obsidian Glass Gradient */}
+            <linearGradient id="obsidianBase" x1="6" y1="3" x2="38" y2="41" gradientUnits="userSpaceOnUse">
+              <stop stopColor="#1E293B" />
+              <stop offset="0.5" stopColor="#0F172A" />
+              <stop offset="1" stopColor="#020617" />
             </linearGradient>
-            <linearGradient id="blueFill" x1="20" y1="10" x2="20" y2="28" gradientUnits="userSpaceOnUse">
-              <stop stopColor="#0066FF" stopOpacity="0.8" />
-              <stop offset="1" stopColor="#0043B8" stopOpacity="0.2" />
+
+            {/* Facet Sheen Gradients */}
+            <linearGradient id="facetTop" x1="22" y1="3" x2="22" y2="22" gradientUnits="userSpaceOnUse">
+              <stop stopColor="#334155" />
+              <stop offset="1" stopColor="#1E293B" />
             </linearGradient>
-            <linearGradient id="blueCore" x1="15" y1="16" x2="25" y2="28" gradientUnits="userSpaceOnUse">
+            <linearGradient id="facetLeft" x1="6" y1="12" x2="22" y2="41" gradientUnits="userSpaceOnUse">
+              <stop stopColor="#1E293B" />
+              <stop offset="1" stopColor="#0A0F1D" />
+            </linearGradient>
+            <linearGradient id="facetRight" x1="38" y1="12" x2="22" y2="41" gradientUnits="userSpaceOnUse">
+              <stop stopColor="#0F172A" />
+              <stop offset="1" stopColor="#020617" />
+            </linearGradient>
+
+            {/* Gold Borders & Facets */}
+            <linearGradient id="goldBorder" x1="6" y1="3" x2="38" y2="41" gradientUnits="userSpaceOnUse">
+              <stop stopColor="#FDE68A" />
+              <stop offset="0.25" stopColor="#D97706" />
+              <stop offset="0.6" stopColor="#F59E0B" />
+              <stop offset="0.85" stopColor="#B45309" />
+              <stop offset="1" stopColor="#78350F" />
+            </linearGradient>
+
+            <linearGradient id="goldFacetLeft" x1="11" y1="9" x2="22" y2="29" gradientUnits="userSpaceOnUse">
+              <stop stopColor="#FEF08A" />
+              <stop offset="0.4" stopColor="#F59E0B" />
+              <stop offset="1" stopColor="#B45309" />
+            </linearGradient>
+
+            <linearGradient id="goldFacetRight" x1="33" y1="9" x2="22" y2="29" gradientUnits="userSpaceOnUse">
+              <stop stopColor="#F59E0B" />
+              <stop offset="0.6" stopColor="#D97706" />
+              <stop offset="1" stopColor="#78350F" />
+            </linearGradient>
+
+            <linearGradient id="goldCore" x1="17" y1="14" x2="27" y2="27" gradientUnits="userSpaceOnUse">
               <stop stopColor="#FFFFFF" />
-              <stop offset="0.4" stopColor="#93C5FD" />
-              <stop offset="1" stopColor="#0066FF" />
+              <stop offset="0.25" stopColor="#FEF08A" />
+              <stop offset="0.65" stopColor="#F59E0B" />
+              <stop offset="1" stopColor="#B45309" />
+            </linearGradient>
+
+            <linearGradient id="goldLine" x1="12" y1="29" x2="32" y2="29" gradientUnits="userSpaceOnUse">
+              <stop stopColor="#B45309" stopOpacity="0.2" />
+              <stop offset="0.3" stopColor="#FDE68A" />
+              <stop offset="0.5" stopColor="#FFFFFF" />
+              <stop offset="0.7" stopColor="#F59E0B" />
+              <stop offset="1" stopColor="#B45309" stopOpacity="0.2" />
+            </linearGradient>
+
+            <linearGradient id="goldWire" x1="11" y1="9" x2="33" y2="29" gradientUnits="userSpaceOnUse">
+              <stop stopColor="#FEF9C3" />
+              <stop offset="0.5" stopColor="#F59E0B" />
+              <stop offset="1" stopColor="#92400E" />
             </linearGradient>
           </defs>
         </svg>
       </div>
 
-      {/* Wordmark */}
+      {/* Obsidian & Gold Wordmark */}
       <div className="flex flex-col">
-        <div className={`font-bold tracking-wider leading-tight flex items-center gap-1.5 ${dimensions.text} ${
-          isDark ? 'text-white' : 'text-slate-900'
-        }`}>
-          <span className="tracking-widest font-extrabold">APEX</span>
-          <span className="text-blue-gradient font-bold tracking-wider">MINERAL</span>
+        <div className={`font-bold tracking-wider leading-tight flex items-center gap-1.5 ${dimensions.text}`}>
+          <span className={`tracking-widest font-extrabold ${
+            isDark ? 'text-white drop-shadow-xs' : 'text-slate-900'
+          }`}>
+            APEX
+          </span>
+          <span 
+            className="font-extrabold tracking-wider"
+            style={{
+              background: 'linear-gradient(135deg, #D97706 0%, #F59E0B 30%, #FDE047 50%, #D97706 75%, #92400E 100%)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              filter: isDark ? 'drop-shadow(0 1px 2px rgba(0,0,0,0.8))' : 'none',
+            }}
+          >
+            MINERAL
+          </span>
         </div>
         {showSubtitle && (
-          <span className={`tracking-[0.25em] uppercase font-semibold text-[9px] ${
-            isDark ? 'text-blue-300/80' : 'text-blue-700'
-          } ${dimensions.sub}`}>
+          <span 
+            className={`tracking-[0.28em] uppercase font-bold text-[8.5px] ${dimensions.sub} ${
+              isDark ? 'text-amber-400/90' : 'text-amber-700/95'
+            }`}
+          >
             Mineral Ventures
           </span>
         )}
@@ -107,3 +193,4 @@ export function BrandLogo({
     </div>
   );
 }
+
