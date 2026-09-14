@@ -43,18 +43,7 @@ export default function ServicesPage() {
         description="We provide end-to-end support for precious metals transactions in Uganda and regional corridors, giving you clear paperwork, certified lab testing, and secure delivery."
       />
 
-      <section className="py-8 bg-white border-b border-slate-200">
-        <div className="container max-w-5xl">
-          <FadeIn>
-            <MediaFrame
-              media={mediaAssets.heroSmelting}
-              kicker="End-to-End Execution"
-              caption="From Mine Sourcing to Global Delivery"
-              heightClassName="h-64 sm:h-80"
-            />
-          </FadeIn>
-        </div>
-      </section>
+
 
       <section className="py-20 bg-white border-b border-slate-200">
         <div className="container">
