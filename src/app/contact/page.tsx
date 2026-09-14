@@ -10,6 +10,13 @@ export const metadata = generatePageMetadata({
   title: 'Contact & Commercial Trading Desk | Apex Mineral Ventures',
   description: 'Initiate formal precious metals trading inquiries, mining advisory requests, and export due diligence with Apex Mineral Ventures in Kampala, Uganda.',
   path: '/contact',
+  image: `${company.siteUrl}/images/trading-desk.jpg`,
+  keywords: [
+    'contact gold dealer Uganda',
+    'mineral trading desk Kampala',
+    'gold export inquiry Uganda',
+    'mining advisory consultation',
+  ],
 });
 
 export default function ContactPage() {

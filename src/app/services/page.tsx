@@ -7,6 +7,7 @@ import { PageMasthead } from '@/components/layout/PageMasthead';
 import { FadeIn } from '@/components/motion/FadeIn';
 import { HoverCard } from '@/components/motion/HoverCard';
 import { ContactChoiceButton } from '@/components/ui/ContactChoiceButton';
+import { company } from '@/config/company';
 import {
   ShieldCheck,
   Scale,
@@ -23,6 +24,14 @@ export const metadata = generatePageMetadata({
   title: 'Services | Mineral Trading, Testing & Export | Apex Mineral Ventures',
   description: 'Explore our services including precious metals trading, mining advisory, certified lab assaying, export paperwork facilitation, and secure vault storage.',
   path: '/services',
+  image: `${company.siteUrl}/images/gold-bullion.jpg`,
+  keywords: [
+    'mineral trading services',
+    'gold export facilitation Uganda',
+    'mining advisory services',
+    'precious metals assay testing',
+    'secure mineral custody Uganda',
+  ],
 });
 
 const serviceIcons: Record<string, React.ComponentType<{ className?: string }>> = {

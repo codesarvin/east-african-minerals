@@ -7,12 +7,21 @@ import { PageMasthead } from '@/components/layout/PageMasthead';
 import { FadeIn } from '@/components/motion/FadeIn';
 import { HoverCard } from '@/components/motion/HoverCard';
 import { ContactChoiceButton } from '@/components/ui/ContactChoiceButton';
+import { company } from '@/config/company';
 import { BookOpen, Calendar, Clock, ArrowRight, FileText, Sparkles, ArrowUpRight } from 'lucide-react';
 
 export const metadata = generatePageMetadata({
   title: 'Mineral Knowledge Base & Sourcing Intelligence | Apex Mineral Ventures',
   description: 'Authoritative guides on Uganda mining licenses, mineral export documentation, assay verification methods, and OECD responsible sourcing standards.',
   path: '/resources',
+  image: `${company.siteUrl}/images/mining-operation.jpg`,
+  keywords: [
+    'Uganda mining intelligence',
+    'mineral sourcing guides',
+    'Uganda mining laws',
+    'gold export compliance guide',
+    'responsible sourcing research',
+  ],
 });
 
 export default function ResourcesPage() {

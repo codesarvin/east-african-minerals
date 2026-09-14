@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { Service } from '@/types';
-import { generateServiceJsonLd, generateBreadcrumbJsonLd } from '@/lib/structured-data';
+import { generateServiceJsonLd, generateBreadcrumbJsonLd, generateFAQPageJsonLd } from '@/lib/structured-data';
 import { company } from '@/config/company';
 import { getServiceMedia } from '@/data/media';
 import { PageMasthead } from '@/components/layout/PageMasthead';
@@ -47,18 +47,7 @@ export function ServiceDetail({ service }: ServiceDetailProps) {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'FAQPage',
-              mainEntity: service.faqs.map((faq) => ({
-                '@type': 'Question',
-                name: faq.question,
-                acceptedAnswer: {
-                  '@type': 'Answer',
-                  text: faq.answer,
-                },
-              })),
-            }),
+            __html: JSON.stringify(generateFAQPageJsonLd(service.faqs)),
           }}
         />
       )}

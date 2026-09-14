@@ -21,6 +21,13 @@ export const metadata = generatePageMetadata({
   title: 'About Us | Apex Mineral Ventures',
   description: 'Learn about Apex Mineral Ventures, our team, and how we help buyers source minerals safely and responsibly in Uganda and international markets.',
   path: '/about',
+  image: `${company.siteUrl}/images/advisory-board.jpg`,
+  keywords: [
+    'about Apex Mineral Ventures',
+    'licensed gold company Uganda',
+    'Uganda mining compliance team',
+    'Kampala precious metals advisory',
+  ],
 });
 
 export default function AboutPage() {
