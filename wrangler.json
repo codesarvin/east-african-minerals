@@ -1,0 +1,8 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "east-african-minerals",
+  "compatibility_date": "2024-09-23",
+  "assets": {
+    "directory": "./out"
+  }
+}
