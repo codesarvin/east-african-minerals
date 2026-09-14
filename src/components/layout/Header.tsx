@@ -10,6 +10,7 @@ import { BrandLogo } from '@/components/ui/BrandLogo';
 import { LiveTradeDeskBar } from '@/components/ui/LiveTradeDeskBar';
 import { QuickQuoteModal } from '@/components/ui/QuickQuoteModal';
 import { iosSpringGentle } from '@/lib/motion';
+import { useReducedMotion } from '@/lib/use-reduced-motion';
 import { ContactChoiceButton } from '@/components/ui/ContactChoiceButton';
 import { 
   ChevronDown, 

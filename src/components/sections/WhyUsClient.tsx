@@ -56,39 +56,7 @@ export function WhyUsClient() {
         description="Mineral sourcing offers significant opportunities, but buying through unverified intermediaries carries real risks. Here is how our transparent process and official documentation protect your mineral purchases."
       />
 
-      <section className="py-12 bg-white border-b border-slate-200">
-        <div className="container max-w-5xl">
-          <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-6" staggerChildren={0.08}>
-            <StaggerItem>
-              <MediaFrame
-                media={mediaAssets.goldBarsStacked}
-                kicker="Quality Assurance"
-                caption="Certified 999.9 Gold Bullion"
-                heightClassName="h-64 sm:h-80"
-                sizes="(max-width: 768px) 100vw, 33vw"
-              />
-            </StaggerItem>
-            <StaggerItem>
-              <MediaFrame
-                media={mediaAssets.rawGoldNuggets}
-                kicker="Responsible Sourcing"
-                caption="Natural Raw Gold & Doré Samples"
-                heightClassName="h-64 sm:h-80"
-                sizes="(max-width: 768px) 100vw, 33vw"
-              />
-            </StaggerItem>
-            <StaggerItem>
-              <MediaFrame
-                media={mediaAssets.exportCargoAircraft}
-                kicker="Insured Logistics"
-                caption="Air cargo export from Entebbe"
-                heightClassName="h-64 sm:h-80"
-                sizes="(max-width: 768px) 100vw, 33vw"
-              />
-            </StaggerItem>
-          </StaggerContainer>
-        </div>
-      </section>
+
 
       {/* Due Diligence Matrix */}
       <DueDiligenceMatrix />
