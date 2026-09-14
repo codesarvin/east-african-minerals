@@ -160,30 +160,22 @@ export function BrandLogo({
         </svg>
       </div>
 
-      {/* Obsidian & Gold Wordmark */}
+      {/* Brand Blue Wordmark */}
       <div className="flex flex-col">
         <div className={`font-bold tracking-wider leading-tight flex items-center gap-1.5 ${dimensions.text}`}>
           <span className={`tracking-widest font-extrabold ${
-            isDark ? 'text-white drop-shadow-xs' : 'text-slate-900'
+            isDark ? 'text-white' : 'text-slate-900'
           }`}>
             APEX
           </span>
-          <span 
-            className="font-extrabold tracking-wider"
-            style={{
-              background: 'linear-gradient(135deg, #D97706 0%, #F59E0B 30%, #FDE047 50%, #D97706 75%, #92400E 100%)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              filter: isDark ? 'drop-shadow(0 1px 2px rgba(0,0,0,0.8))' : 'none',
-            }}
-          >
+          <span className="text-blue-gradient font-extrabold tracking-wider">
             MINERAL
           </span>
         </div>
         {showSubtitle && (
           <span 
-            className={`tracking-[0.28em] uppercase font-bold text-[8.5px] ${dimensions.sub} ${
-              isDark ? 'text-amber-400/90' : 'text-amber-700/95'
+            className={`tracking-[0.25em] uppercase font-semibold ${dimensions.sub} ${
+              isDark ? 'text-blue-300/80' : 'text-blue-700'
             }`}
           >
             Mineral Ventures

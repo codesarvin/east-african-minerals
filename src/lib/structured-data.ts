@@ -18,7 +18,105 @@ export function generateOrganizationJsonLd() {
       telephone: company.phone,
       email: company.email,
       contactType: 'sales',
+      availableLanguage: 'English',
+      areaServed: ['UG', 'KE', 'TZ', 'RW', 'CD'],
     },
+    areaServed: [
+      { '@type': 'Country', name: 'Uganda' },
+      { '@type': 'Country', name: 'Kenya' },
+      { '@type': 'Country', name: 'Tanzania' },
+      { '@type': 'Country', name: 'Rwanda' },
+      { '@type': 'Country', name: 'Democratic Republic of the Congo' },
+    ],
+    knowsAbout: [
+      'Gold Trading',
+      'Precious Metals',
+      'Mineral Export',
+      'Mining Advisory',
+      'Gold Assay Testing',
+      'Uganda Mining Licenses',
+      'Mineral Export Documentation',
+      'Responsible Mineral Sourcing',
+    ],
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'Mineral Trading Services',
+      itemListElement: [
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Precious Metals Trading',
+            url: `${company.siteUrl}/services/precious-metals-trading`,
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Mining Advisory Services',
+            url: `${company.siteUrl}/services/mining-advisory`,
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Export Facilitation',
+            url: `${company.siteUrl}/services/export-facilitation`,
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Transaction Security',
+            url: `${company.siteUrl}/services/transaction-security`,
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Secure Storage Solutions',
+            url: `${company.siteUrl}/services/secure-storage`,
+          },
+        },
+      ],
+    },
+  };
+}
+
+export function generateLocalBusinessJsonLd() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': ['LocalBusiness', 'ProfessionalService'],
+    name: company.name,
+    description: company.description,
+    url: company.siteUrl,
+    telephone: company.phone,
+    email: company.email,
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: company.city,
+      addressCountry: 'UG',
+    },
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: 0.3476,
+      longitude: 32.5825,
+    },
+    openingHoursSpecification: [
+      {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+        opens: '08:00',
+        closes: '17:00',
+      },
+    ],
+    priceRange: '$$$$',
+    currenciesAccepted: 'USD, UGX',
+    paymentAccepted: 'Bank Transfer, Escrow',
   };
 }
 
@@ -29,6 +127,19 @@ export function generateWebSiteJsonLd() {
     name: company.name,
     url: company.siteUrl,
     description: company.description,
+    publisher: {
+      '@type': 'Organization',
+      name: company.name,
+      url: company.siteUrl,
+    },
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: {
+        '@type': 'EntryPoint',
+        urlTemplate: `${company.siteUrl}/resources?q={search_term_string}`,
+      },
+      'query-input': 'required name=search_term_string',
+    },
   };
 }
 
@@ -80,6 +191,8 @@ export function generateArticleJsonLd({
       url: company.siteUrl,
     },
     url,
+    inLanguage: 'en',
+    isAccessibleForFree: true,
   };
 }
 
@@ -100,7 +213,29 @@ export function generateServiceJsonLd({
     provider: {
       '@type': 'Organization',
       name: company.name,
+      url: company.siteUrl,
     },
+    areaServed: [
+      { '@type': 'Country', name: 'Uganda' },
+      { '@type': 'Country', name: 'Kenya' },
+      { '@type': 'Country', name: 'Tanzania' },
+    ],
+    serviceType: 'Mineral Trading Services',
     url,
+  };
+}
+
+export function generateFAQPageJsonLd(faqs: Array<{ question: string; answer: string }>) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((faq) => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.answer,
+      },
+    })),
   };
 }
