@@ -5,12 +5,12 @@ import { motion, AnimatePresence } from 'motion/react';
 import { FadeIn } from '@/components/motion/FadeIn';
 import { iosSpringGentle } from '@/lib/motion';
 import { useReducedMotion } from '@/lib/use-reduced-motion';
+import { ContactChoiceButton } from '@/components/ui/ContactChoiceButton';
 import {
   ShieldCheck,
   QrCode,
   Stamp,
   Lock,
-  ExternalLink,
   CheckCircle2,
 } from 'lucide-react';
 
@@ -263,13 +263,12 @@ export function AssayDocumentInspector() {
                 </div>
 
                 <div className="pt-4 border-t border-slate-100">
-                  <a
-                    href="/contact"
-                    className="btn-3d-primary w-full inline-flex items-center justify-center gap-2 py-3.5 px-5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs uppercase tracking-wider transition-colors shadow-md shadow-blue-500/20"
-                  >
-                    <span>Request Sample Documents</span>
-                    <ExternalLink className="w-3.5 h-3.5" />
-                  </a>
+                  <ContactChoiceButton
+                    label="Request Sample Documents"
+                    variant="primary"
+                    fullWidth
+                    className="[&>button]:py-3.5"
+                  />
                 </div>
               </div>
             </motion.div>

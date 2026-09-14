@@ -3,6 +3,8 @@ import { company } from '@/config/company';
 import { services } from '@/data/services';
 import { resources } from '@/data/resources';
 
+export const dynamic = 'force-static';
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = company.siteUrl;
 

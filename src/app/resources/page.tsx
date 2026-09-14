@@ -6,6 +6,7 @@ import { generatePageMetadata } from '@/lib/metadata';
 import { PageMasthead } from '@/components/layout/PageMasthead';
 import { FadeIn } from '@/components/motion/FadeIn';
 import { HoverCard } from '@/components/motion/HoverCard';
+import { ContactChoiceButton } from '@/components/ui/ContactChoiceButton';
 import { BookOpen, Calendar, Clock, ArrowRight, FileText, Sparkles, ArrowUpRight } from 'lucide-react';
 
 export const metadata = generatePageMetadata({
@@ -155,13 +156,11 @@ export default function ResourcesPage() {
               Our advisory desk prepares bespoke compliance dossiers, concessions evaluations, and assay verification protocols for institutional buyers.
             </p>
             <div className="pt-6">
-              <Link
-                href="/contact"
-                className="cta-glow inline-flex items-center justify-center gap-2 px-8 py-4 text-sm font-bold uppercase tracking-wider text-white bg-blue-600 hover:bg-blue-700 rounded-xl transition-all"
-              >
-                <span>Initiate Commercial Inquiry</span>
-                <ArrowRight className="w-4 h-4" />
-              </Link>
+              <ContactChoiceButton
+                label="Initiate Commercial Inquiry"
+                variant="primary"
+                className="[&>button]:px-8 [&>button]:py-4 [&>button]:text-sm"
+              />
             </div>
           </FadeIn>
         </div>

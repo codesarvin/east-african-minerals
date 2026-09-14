@@ -4,6 +4,7 @@ import { generateArticleJsonLd, generateBreadcrumbJsonLd } from '@/lib/structure
 import { company } from '@/config/company';
 import { getResourceMedia } from '@/data/media';
 import { PageMasthead } from '@/components/layout/PageMasthead';
+import { MediaFrame } from '@/components/media/MediaFrame';
 import { FadeIn } from '@/components/motion/FadeIn';
 import { HoverCard } from '@/components/motion/HoverCard';
 import { ContactChoiceButton } from '@/components/ui/ContactChoiceButton';
@@ -331,13 +332,11 @@ export function ArticleDetail({ article, relatedArticles }: ArticleDetailProps) 
             Our advisory team helps international buyers and mining operators with regulatory navigation and verification.
           </p>
           <div className="pt-6">
-            <Link
-              href="/contact"
-              className="btn-3d-primary cta-glow inline-flex items-center justify-center gap-2 px-8 py-4 text-sm font-bold uppercase tracking-wider text-white bg-blue-600 hover:bg-blue-700 rounded-xl transition-all shadow-lg"
-            >
-              <span>Talk to Our Team</span>
-              <ArrowRight className="w-4 h-4" />
-            </Link>
+            <ContactChoiceButton
+              label="Talk to Our Team"
+              variant="primary"
+              className="[&>button]:px-8 [&>button]:py-4 [&>button]:text-sm"
+            />
           </div>
           </FadeIn>
         </div>

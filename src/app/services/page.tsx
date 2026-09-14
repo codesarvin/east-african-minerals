@@ -1,12 +1,12 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { services } from '@/data/services';
-import { mediaAssets, getServiceMedia } from '@/data/media';
+import { getServiceMedia } from '@/data/media';
 import { generatePageMetadata } from '@/lib/metadata';
 import { PageMasthead } from '@/components/layout/PageMasthead';
-import { MediaFrame } from '@/components/media/MediaFrame';
 import { FadeIn } from '@/components/motion/FadeIn';
 import { HoverCard } from '@/components/motion/HoverCard';
+import { ContactChoiceButton } from '@/components/ui/ContactChoiceButton';
 import {
   ShieldCheck,
   Scale,
@@ -113,13 +113,11 @@ export default function ServicesPage() {
               Whether you have a specific trade volume in mind, need testing on existing inventory, or want advice on local licenses, we are ready to assist.
             </p>
             <div className="pt-6">
-              <Link
-                href="/contact"
-                className="cta-glow inline-flex items-center justify-center gap-2 px-8 py-4 text-sm font-bold uppercase tracking-wider text-white bg-blue-600 hover:bg-blue-700 rounded-xl transition-all"
-              >
-                <span>Get in Touch with Us</span>
-                <ArrowRight className="w-4 h-4" />
-              </Link>
+              <ContactChoiceButton
+                label="Get in Touch with Us"
+                variant="primary"
+                className="[&>button]:px-8 [&>button]:py-4 [&>button]:text-sm"
+              />
             </div>
           </FadeIn>
         </div>
