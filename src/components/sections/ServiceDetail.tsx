@@ -7,6 +7,7 @@ import { PageMasthead } from '@/components/layout/PageMasthead';
 import { MediaFrame } from '@/components/media/MediaFrame';
 import { FadeIn } from '@/components/motion/FadeIn';
 import { HoverCard } from '@/components/motion/HoverCard';
+import { ContactChoiceButton } from '@/components/ui/ContactChoiceButton';
 import { ArrowLeft, CheckCircle2, ArrowRight, HelpCircle, Sparkles, ShieldCheck } from 'lucide-react';
 
 interface ServiceDetailProps {

@@ -2,10 +2,8 @@
 
 import Link from 'next/link';
 import { motion } from 'motion/react';
-import { mediaAssets } from '@/data/media';
 import { pipelineStages } from '@/data/pipeline';
 import { PageMasthead } from '@/components/layout/PageMasthead';
-import { MediaFrame } from '@/components/media/MediaFrame';
 import { Pipeline } from '@/components/sections/Pipeline';
 import { DueDiligenceMatrix } from '@/components/sections/DueDiligenceMatrix';
 import { AssayDocumentInspector } from '@/components/tools/AssayDocumentInspector';
@@ -13,6 +11,7 @@ import { FadeIn } from '@/components/motion/FadeIn';
 import { HoverCard } from '@/components/motion/HoverCard';
 import { StaggerContainer, StaggerItem } from '@/components/motion/Reveal';
 import { iosSpring } from '@/lib/motion';
+import { ContactChoiceButton } from '@/components/ui/ContactChoiceButton';
 import {
   ShieldCheck,
   Scale,
@@ -146,13 +145,11 @@ export function WhyUsClient() {
             </p>
             <div className="pt-6">
               <motion.div whileHover={{ scale: 1.03, y: -2 }} whileTap={{ scale: 0.96 }} transition={iosSpring} className="inline-block">
-                <Link
-                  href="/contact"
-                  className="btn-3d-primary cta-glow inline-flex items-center justify-center gap-2 px-8 py-4 text-sm font-bold uppercase tracking-wider text-white bg-blue-600 hover:bg-blue-700 rounded-xl transition-all shadow-lg"
-                >
-                  <span>Contact Our Team</span>
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
+                <ContactChoiceButton
+                  label="Contact Our Team"
+                  variant="primary"
+                  className="[&>button]:px-8 [&>button]:py-4 [&>button]:text-sm"
+                />
               </motion.div>
             </div>
           </FadeIn>
