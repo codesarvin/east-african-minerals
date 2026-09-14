@@ -7,7 +7,6 @@ import { motion, AnimatePresence } from 'motion/react';
 import { navigation } from '@/data/navigation';
 import { company } from '@/config/company';
 import { BrandLogo } from '@/components/ui/BrandLogo';
-import { LiveTradeDeskBar } from '@/components/ui/LiveTradeDeskBar';
 import { QuickQuoteModal } from '@/components/ui/QuickQuoteModal';
 import { iosSpringGentle } from '@/lib/motion';
 import { useReducedMotion } from '@/lib/use-reduced-motion';
@@ -84,9 +83,6 @@ export function Header() {
 
   return (
     <>
-      {/* Live Operational Status Bar */}
-      <LiveTradeDeskBar onOpenQuote={() => setQuoteModalOpen(true)} />
-
       <header
         className={`sticky top-0 z-40 w-full transition-all duration-300 ${
           scrolled
